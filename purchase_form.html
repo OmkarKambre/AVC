@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<!--https://www.cashfree.com/blog/payment-page-design-examples/#Lenskart-->
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <title>CHECKOUT</title>
+  <style>
+    .table-container {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+
+    td {
+      padding: 10px;
+      text-align: center;
+      border: 1px solid black;
+    }
+  </style>
+
+
+
+
+
+
+
+
+
+</head>
+    <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #e3f2fd;">
+        <a class="navbar-brand" href="#">AVC</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="main_hp.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="About_Us.html">About Us</a>
+                </li>
+                <li class="nav-item dropdown active">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      AMC
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="purchase_form.html">Buy</a>
+                  </div>
+              </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Services
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="onsite_frontend.html">On Site</a>
+                        <a class="dropdown-item" href="offsite_frontend.html">Off Site</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="FAQ_page.html">FAQs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="feedback.html">Feedback</a>
+                </li>
+                
+                <li class="nav-item">
+                  <a class="nav-link" href="provide.html">Offerings</a>
+              </li>
+            </ul>
+            <a href="login_frontend.html"><button class="btn btn-danger">Log Out</button></a>
+        </div>
+    </nav>
+<body>
+
+  <div class="container">
+    <div class="py-4 text-center">
+      <h1><u>CHECKOUT</u></h1>
+    </div>
+    <hr>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <strong>
+          <h2>Billing Address</h2>
+        </strong>
+        <form action="purchase_form_backend.php" method="post">
+          <div class="form-row">
+
+            <div class="form-group col-md-6">
+              <label for="f_name">First Name</label>
+              <input type="text" class="form-control" name="f_name" id="f_name" placeholder="First Name" required>
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="l_name">Lastname</label>
+              <input type="text" class="form-control" id="l_name" name="l_name" placeholder="Last Name" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="v_no">Vehicle Number</label>
+            <input type="text" class="form-control" id="v_no" name="v_no" placeholder="Vehicle Number" required>
+          </div>
+
+          <div class="dropdown dropdown">
+            <button class="btn" type="button" data-toggle="dropdown"><strong>QR Code</strong> 
+              <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+              <li>
+                <img src="https://tse4.mm.bing.net/th?id=OIP.3PS24iiu-A3RpY9MdvBxKAHaHa&pid=Api&P=0" height="130px"
+                  width="120px">
+              </li>
+            </ul>
+          </div>
+
+          <hr>
+
+          <div class="form-group">
+            <label for="i_up"><strong>Upload Payment Screenshot</strong>  </label>
+            <input type="file" class="form-control" id="i_up" name="i_up" value="" />
+          </div>
+
+          <hr>
+
+          <div class="form-group">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck">
+              <label class="form-check-label" for="gridCheck">
+                Check me out
+              </label>
+            </div>
+          </div>
+          <button type="submit" name="insert" id="insert" value="insert" class="btn btn-primary">CHECKOUT</button>
+        </form>
+      </div>
+
+      <div class="col">
+        <strong>
+          <h2>Order Summary</h2>
+        </strong>
+        <div class="table-container">
+          <table>
+            <tbody>
+              <tr>
+                <td><h3>Item</h3> </td>
+                <td><h3>AMC</h3></td>
+              </tr>
+              <tr>
+                <td><h3>Duration</h3></td>
+                <td><h3>1 Year</h3></td>
+              </tr>
+              <tr>
+                <td><h3>Amount</h3></td>
+                <td><h3>2000</h3></td>
+              </tr>
+              <tr>
+                <td><h3>GST</h3></td>
+                <td><h3>100</h3></td>
+              </tr>
+              <tr>
+                <td><strong><h2>Total</h2></strong></td>
+                <td><strong><h2>2100</h2></strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+</body>
+
+</html>

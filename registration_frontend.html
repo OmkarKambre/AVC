@@ -1,0 +1,126 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>REGISTRATION PAGE</title>
+  <style>
+    html
+
+    h1
+    {
+      position: center;
+      top: 180px;
+      font-size: 25px;
+      color: #fff;
+      text-align: center;
+      -webkit-animation: glow 1s ease-in-out infinite alternate;
+      -moz-animation: glow 1s ease-in-out infinite alternate;
+      animation: glow 1s ease-in-out infinite alternate;
+      text-shadow: 0 0 5px yellow, 0 0 8px white, 0 0 26px red, 0 0 34px orange, 0 0 40px cyan, 0 0 50px pink, 0 0 60px orange;
+      text-shadow: 0 0 7px yellow, 0 0 16px white, 0 0 35px red, 0 0 44px orange, 0 0 50px cyan, 0 0 60px pink, 0 0 70px orange;
+    }
+        @media only screen and (max-width: 768px) {
+
+      h1  {
+        font-size: 20px;
+      }
+    }
+
+    @media only screen and (max-width: 425px) {
+
+      h1{
+        font-size: 14px;
+      }
+    }
+
+   
+     div
+     {
+      padding : 1%;
+      color: white;
+      background-color: 009900;
+      width: 30%;
+      border: solid black;
+    }
+    input[type=text],[type=password],[type=tel],[type=email]
+    {
+      width: 300px;
+      -webkit-transition: width .35s ease-in-out;
+      transition: width .35s ease-in-out;
+      border-radius: 5px;
+      font-size: calc(1em * var(--text-multiplier));
+      background-color:linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), white;
+      opacity: 0.7;
+      border-width: 6px;
+      border-color: white;  
+    }
+    input[type=text]:focus,[type=password]:focus,[type=tel]:focus 
+    {
+  width: 250px;
+    }
+    input[type="submit"] 
+    {
+      border:2px solid white;
+      padding:5px 20px;
+      font-size:calc(1em * var(--text-multiplier));
+      width: auto;
+      border-radius: 5px;
+      transition:0.5s all linear;
+      background-color: green;
+      font-weight: bold;
+    }
+    input[type="submit"]:hover 
+    {
+      background-size:100% 100%;
+    }
+
+    label
+    {
+      font-size: calc(1em * var(--text-multiplier));
+      font-weight: bold;
+      color: white;
+    }
+    
+
+  </style> 
+</head>
+<body style="background-color: white; background-image: linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.62)), url('https://png.pngtree.com/thumb_back/fh260/background/20200714/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center; height: auto; width: auto;">
+  
+  <p></p><br><br>
+
+  <center><h1>REGISTER HERE</h1></center>
+  <center>
+
+  <form action="registration_backend.php" method="post">
+
+     
+    <label for="fname">First Name:</label><br><br>
+    <input type="text" id="f_name" name="f_name" placeholder="First Name" pattern="^[A-Z][a-z]{2,29}$" autofocus required><br><br>
+
+    <label for="lname">Last Name:</label><br><br>
+    <input type="text" id="l_name" name="l_name" placeholder="Last Name" pattern="^[A-Z][a-z]{2,29}$" required> <br><br>
+
+    <label for="p_no">Phone Number:</label><br><br>
+    <input type="tel" id="p_no" name="p_no" placeholder="Phone Number" pattern = "^[{0,1}[0-9]{1,4}[{0,1}/0-9]*$"required><br><br>
+
+    <label for="v_no">Vehicle Number:</label><br><br>
+    <input type="text" id="v_no" name="v_no" placeholder="Vehicle Number" required><br><br>
+
+    <label for="rc_no">RC Number:</label><br><br>
+    <input type="text" id="rc_no" name="rc_no" placeholder="RC Number"required><br><br>
+
+    <label for="email">Email: </label><br><br>
+    <input type="email" id="email" name="email" placeholder="Email" required><br><br> 
+
+    <label for="password">Password: </label><br><br>
+    <input type="password" id="password" name="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 and at most 15 characters" required><br><br><br> 
+
+   <center><a href="http://localhost/Project/registration_backend.php"><input type="submit"></a></center>
+  
+
+  </form>
+  </center>   
+
+
+</body>
+</html>  
